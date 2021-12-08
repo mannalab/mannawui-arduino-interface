@@ -1,0 +1,37 @@
+{
+	"packages": [{
+		"name": "MannaWUI",
+		"maintainer": "Manna Team",
+		"websiteURL": "https://github.com/mannalab/mannawui-arduino-interface",
+		"email": "email@manna.com",
+		"help": {
+			"online": "https://github.com/mannalab/mannawui-arduino-interface/blob/master/mannaWUI/readme.txt"
+		},
+		"platforms": [{
+			"name": "MannaWui",
+			"architecture": "stm32",
+			"version": "",
+			"category": "mannawui",
+			"url": "",
+			"archiveFileName": "",
+			"checksum": "",
+			"size": "",
+			"help": {
+				"online": "https://github.com/mannalab/mannawui-arduino-interface/blob/master/mannaWUI/readme.txt"
+			},
+			"boards": [{
+				"name": "MannaWUI"
+			}],
+			"toolsDependencies": [{
+				"packager": "arduino",
+				"name": "avr-gcc",
+				"version": "4.8.1-arduino5"
+			}, {
+				"packager": "arduino",
+				"name": "avrdude",
+				"version": "6.0.1-arduino5"
+			}]
+		}],
+		"tools": []
+	}]
+}
