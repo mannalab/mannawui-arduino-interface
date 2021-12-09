@@ -3,14 +3,14 @@
 		"name": "MannaWUI",
 		"maintainer": "Manna Team",
 		"websiteURL": "https://github.com/mannalab/mannawui-arduino-interface",
-		"email": "email@manna.com",
+		"email": "proj-manna@uem.br",
 		"help": {
 			"online": "https://github.com/mannalab/mannawui-arduino-interface/blob/master/mannaWUI/readme.txt"
 		},
 		"platforms": [{
 			"name": "MannaWui",
 			"architecture": "stm32",
-			"version": "",
+			"version": "0.0.1",
 			"category": "mannawui",
 			"url": "",
 			"archiveFileName": "",
@@ -32,6 +32,7 @@
 				"version": "6.0.1-arduino5"
 			}]
 		}],
+		
 		"tools": []
 	}]
 }
