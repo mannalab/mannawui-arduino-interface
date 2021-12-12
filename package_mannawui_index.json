@@ -1,17 +1,17 @@
 {
 	"packages": [{
-		"name": "MannaWUI",
+		"name": "mannawui",
 		"maintainer": "Manna Team",
 		"websiteURL": "https://github.com/mannalab/mannawui-arduino-interface",
-		"email": "email@manna.com",
+		"email": "proj-manna@uem.br",
 		"help": {
 			"online": "https://github.com/mannalab/mannawui-arduino-interface/blob/master/mannaWUI/readme.txt"
 		},
 		"platforms": [{
-			"name": "MannaWui",
+			"name": "MannaWUI",
 			"architecture": "stm32",
-			"version": "",
-			"category": "mannawui",
+			"version": "0.0.1",
+			"category": "Mannawui",
 			"url": "",
 			"archiveFileName": "",
 			"checksum": "",
@@ -32,6 +32,7 @@
 				"version": "6.0.1-arduino5"
 			}]
 		}],
+		
 		"tools": []
 	}]
 }
