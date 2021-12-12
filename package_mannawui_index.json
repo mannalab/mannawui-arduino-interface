@@ -12,7 +12,7 @@
 			"architecture": "avr",
 			"version": "1.0.0",
 			"category": "Mannawui",
-			"url": "",
+			"url": "https://github.com/bedreski/mannawui-arduino-interface/releases/download/v1.0.0/MannaWui-1.0.zip",
 			"archiveFileName": "MannaWui-1.0.zip",
 			"checksum": "SHA-256:684803057e12b919f1e9e0f3b8560191105e6cb9be86958024a681b1807bbe9d",
 			"size": "3310",
