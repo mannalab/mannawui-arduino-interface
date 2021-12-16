@@ -47,4 +47,13 @@ mannaWUI.menu.upload_method.dfuMethod.upload.protocol=2
 mannaWUI.menu.upload_method.dfuMethod.upload.options=-g
 mannaWUI.menu.upload_method.dfuMethod.upload.tool=stm32CubeProg
 
+
+#Block from https://github.com/stm32duino/Arduino_Core_STM32/blob/fa6e5cba3548e0fd2f254ff503e610a7a3118cfe/platform.txt
+# These can be overriden in boards.txt
+build.extra_flags=
+build.bootloader_flags=
+build.ldscript=ldscript.ld
+build.variant_h=variant_generic.h
+
+
 ################################################################################
