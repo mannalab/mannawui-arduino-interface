@@ -4,6 +4,16 @@
 name=MannaWUI
 version=1.0.0
 
+#arm.none-eabi-gcc config
+#-----------------------------
+tools.arm_none_eabi_gcc.path         = {runtime.tools.arm-none-eabi-gcc.path}/bin/
+tools.arm_none_eabi_gcc.as           = arm-none-eabi-as
+tools.arm_none_eabi_gcc.gcc          = arm-none-eabi-gcc
+tools.arm_none_eabi_gcc.g++          = arm-none-eabi-g++
+tools.arm_none_eabi_gcc.ar           = arm-none-eabi-ar
+tools.arm_none_eabi_gcc.objcopy      = arm-none-eabi-objcopy
+tools.arm_none_eabi_gcc.size         = arm-none-eabi-size
+
 # STM compile variables
 # ----------------------
 compiler.stm.extra_include="-I{build.source.path}" "-I{build.core.path}/avr" "-I{build.core.path}/stm32" "-I{build.core.path}/stm32/LL" "-I{build.core.path}/stm32/usb" "-I{build.core.path}/stm32/OpenAMP" "-I{build.core.path}/stm32/usb/hid" "-I{build.core.path}/stm32/usb/cdc" "-I{build.system.path}/Drivers/{build.series}_HAL_Driver/Inc" "-I{build.system.path}/Drivers/{build.series}_HAL_Driver/Src" "-I{build.system.path}/{build.series}" "-I{build.system.path}/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" "-I{build.system.path}/Middlewares/ST/STM32_USB_Device_Library/Core/Src" {build.virtio_extra_include}
@@ -94,8 +104,10 @@ recipe.size.regex=^(?:\.text|\.data|\.rodata)\s+([0-9]+).*
 recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
 recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
 
-## Recipe Preproc Macros
-preproc.includes.flags=-w -x c++ -M -MG -MP
-recipe.preproc.includes="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {preproc.includes.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} "{source_file}"
-preproc.macros.flags=-w -x c++ -E -CC
-recipe.preproc.macros="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {preproc.macros.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{preprocessed_file_path}"
+
+###### Preprocessor
+#--------------------------
+preproc.includes.flags               = -w -x c++ -M -MG -MP
+recipe.preproc.includes              = "{tools.arm_none_eabi_gcc.path}{tools.arm_none_eabi_gcc.g++}" {preproc.includes.flags} {tools.arm_none_eabi_gcc.cpp.cflags} {tools.arm_none_eabi_gcc.cpp.cppflags} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} {tools.arm_none_eabi_gcc.cpp.defines} {includes} {tools.arm_none_eabi_gcc.cpp.includes} "{source_file}"
+preproc.macros.flags                 = -w -x c++ -E -CC
+recipe.preproc.macros                = "{tools.arm_none_eabi_gcc.path}{tools.arm_none_eabi_gcc.g++}" {preproc.macros.flags} {tools.arm_none_eabi_gcc.cpp.cflags} {tools.arm_none_eabi_gcc.cpp.cppflags} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} {tools.arm_none_eabi_gcc.cpp.defines} {includes} {tools.arm_none_eabi_gcc.cpp.includes} "{source_file}" -o "{preprocessed_file_path}"
