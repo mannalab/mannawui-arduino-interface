@@ -14,7 +14,7 @@
 			"category": "Mannawui",
 			"url": "https://github.com/bedreski/mannawui-arduino-interface/releases/download/v1.0.0/MannaWui-1.0.zip",
 			"archiveFileName": "MannaWui-1.0.zip",
-			"checksum": "SHA-256:606ae1e953d1c8f828b1baa94cbeff48c4f2b22f6f99f5da10a686430280989d",
+			"checksum": "SHA-256:f71da92f5a4e12278feb5c834c7059bb5088fb0e6a1b4f7a0c67080116db655e",
 			"size": "3310",
 			"help": {
 				"online": "https://github.com/mannalab/mannawui-arduino-interface/blob/master/mannaWUI/readme.txt"
