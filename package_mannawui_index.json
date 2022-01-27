@@ -14,7 +14,7 @@
 			"category": "Mannawui",
 			"url": "https://github.com/bedreski/mannawui-arduino-interface/releases/download/v1.0.0/MannaWui-1.0.zip",
 			"archiveFileName": "MannaWui-1.0.zip",
-			"checksum": "SHA-256:5e61ee72a9b804ff2f84ad17524eea3d490ecb2a6a0bd78f596b4be2474382ee",
+			"checksum": "SHA-256:606ae1e953d1c8f828b1baa94cbeff48c4f2b22f6f99f5da10a686430280989d",
 			"size": "3310",
 			"help": {
 				"online": "https://github.com/mannalab/mannawui-arduino-interface/blob/master/mannaWUI/readme.txt"
@@ -23,11 +23,67 @@
 				"name": "MannaWUI"
 			}],
 			"toolsDependencies": [
+
+				{
+					"packager": "STMicroelectronics",
+					"name": "xpack-arm-none-eabi-gcc",
+					"version": "10.2.1-1.1"
+				}
 				
 			]
 		}],
 		
 		"tools": [
+
+			{
+				"name": "xpack-arm-none-eabi-gcc",
+				"version": "10.2.1-1.1",
+				"systems":
+				[
+				  {
+					"host": "arm-linux-gnueabihf",
+					"url": "https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.2.1-1.1/xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-arm.tar.gz",
+					"archiveFileName": "xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-arm.tar.gz",
+					"checksum": "SHA-256:b726faccb8a3c426012592145d9d49a9b998a950613a4848bf8d899a8929ae34",
+					"size": "182652907"
+				  },
+				  {
+					"host": "aarch64-linux-gnu",
+					"url": "https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.2.1-1.1/xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-arm64.tar.gz",
+					"archiveFileName": "xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-arm64.tar.gz",
+					"checksum": "SHA-256:88b4f581a14b0dc2ee2313f4342f38996a4c8f3e4d09d9f70a6c4a4b9ea360e7",
+					"size": "187490794"
+				  },
+				  {
+					"host": "i686-mingw32",
+					"url": "https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.2.1-1.1/xpack-arm-none-eabi-gcc-10.2.1-1.1-win32-ia32.zip",
+					"archiveFileName": "xpack-arm-none-eabi-gcc-10.2.1-1.1-win32-ia32.zip",
+					"checksum": "SHA-256:5b4576c8280a6788bd1abe54c8172e03f9947ddd776960d2043b33955389e739",
+					"size": "190155753"
+				  },
+				  {
+					"host": "x86_64-apple-darwin",
+					"url": "https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.2.1-1.1/xpack-arm-none-eabi-gcc-10.2.1-1.1-darwin-x64.tar.gz",
+					"archiveFileName": "xpack-arm-none-eabi-gcc-10.2.1-1.1-darwin-x64.tar.gz",
+					"checksum": "SHA-256:061615d3e35d026cfa3ef8999f2bdaef2181b56e61029f58c8e0f1054bba046b",
+					"size": "183654470"
+				  },
+				  {
+					"host": "x86_64-pc-linux-gnu",
+					"url": "https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.2.1-1.1/xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-x64.tar.gz",
+					"archiveFileName": "xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-x64.tar.gz",
+					"checksum": "SHA-256:840e90b527d30143b8d8e5eb894218858ed14226bdc8664686f0848592b6e474",
+					"size": "188707051"
+				  },
+				  {
+					"host": "i686-pc-linux-gnu",
+					"url": "https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.2.1-1.1/xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-ia32.tar.gz",
+					"archiveFileName": "xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-ia32.tar.gz",
+					"checksum": "SHA-256:8adaca8af367a54d1acd2b274cfdc18384b87fbe0ba613322ea3ead20677a132",
+					"size": "192497639"
+				  }
+				]
+			}
 
 		]
 	}]
