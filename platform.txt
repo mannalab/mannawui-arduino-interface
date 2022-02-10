@@ -6,7 +6,7 @@ version=1.0.0
 
 #arm.none-eabi-gcc config
 #-----------------------------
-tools.arm_none_eabi_gcc.path         = C:\Users\bedre\AppData\Local\Arduino15\staging\packages\gcc-arm-none-eabi-7-2017-q4-major-win32-arduino1.zip\gcc-arm-none-eabi-7-2017-q4-major-win32\bin\
+tools.arm_none_eabi_gcc.path         = C:\Users\bedre\AppData\Local\Arduino15\staging\packages\gcc-arm-none-eabi-7-2017-q4-major-win32-arduino1\gcc-arm-none-eabi-7-2017-q4-major-win32\bin
 tools.arm_none_eabi_gcc.as           = arm-none-eabi-as
 tools.arm_none_eabi_gcc.gcc          = arm-none-eabi-gcc
 tools.arm_none_eabi_gcc.g++          = arm-none-eabi-g++
@@ -24,9 +24,8 @@ compiler.warning_flags.default=
 compiler.warning_flags.more=-Wall
 compiler.warning_flags.all=-Wall -Wextra
 
-##compiler.path={runtime.tools.xpack-arm-none-eabi-gcc-10.2.1-1.1.path}/bin/
-compiler.path=C:\Users\bedre\AppData\Local\Arduino15\staging\packages\gcc-arm-none-eabi-7-2017-q4-major-win32-arduino1.zip\gcc-arm-none-eabi-7-2017-q4-major-win32\bin\
 
+compiler.path={runtime.tools.xpack-arm-none-eabi-gcc-10.2.1-1.1.path}/bin/
 compiler.S.cmd=arm-none-eabi-gcc
 compiler.c.cmd=arm-none-eabi-gcc
 compiler.cpp.cmd=arm-none-eabi-g++
