@@ -44,7 +44,7 @@
 					"host": "arm-linux-gnueabihf",
 					"url": "https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/download/v10.2.1-1.1/xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-arm.tar.gz",
 					"archiveFileName": "xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-arm.tar.gz",
-					"checksum": "SHA-256:b726faccb8a3c426012592145d9d49a9b998a950613a4848bf8d899a8929ae34",
+					"checksum": "SHA-256:22f5f8212535bbaa6e33eec17676a72a07263b30358e66f00bbf03e42607d18c",
 					"size": "182652907"
 				  },
 				  {

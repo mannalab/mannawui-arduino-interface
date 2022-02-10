@@ -6,7 +6,7 @@ version=1.0.0
 
 #arm.none-eabi-gcc config
 #-----------------------------
-tools.arm_none_eabi_gcc.path         = C:\Users\bedre\AppData\Local\Arduino15\staging\packages\gcc-arm-none-eabi-7-2017-q4-major-win32-arduino1\gcc-arm-none-eabi-7-2017-q4-major-win32\bin\
+tools.arm_none_eabi_gcc.path         = C:\Users\bedre\AppData\Local\Arduino15\staging\packages\xpack-arm-none-eabi-gcc-10.2.1-1.1-win32-ia32\xpack-arm-none-eabi-gcc-10.2.1-1.1\bin\
 tools.arm_none_eabi_gcc.as           = arm-none-eabi-as
 tools.arm_none_eabi_gcc.gcc          = arm-none-eabi-gcc
 tools.arm_none_eabi_gcc.g++          = arm-none-eabi-g++
