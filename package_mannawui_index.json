@@ -11,10 +11,10 @@
 			"name": "MannaWUI",
 			"architecture": "stm32",
 			"version": "1.0.0",
-			"category": "Mannawui",
+			"category": "Contributed",
 			"url": "https://github.com/bedreski/mannawui-arduino-interface/releases/download/v1.0.0/MannaWui-1.0.zip",
 			"archiveFileName": "MannaWui-1.0.zip",
-			"checksum": "SHA-256:dff9c694eb140694e74d9c68fca131e566e4a0727b572e0d14d0f6876051900f",
+			"checksum": "SHA-256:2a5e4b9c366575ce3cae8edb6d934ec51708d297933489ff058dbe933b125179",
 			"size": "3310",
 			"help": {
 				"online": "https://github.com/mannalab/mannawui-arduino-interface/blob/master/mannaWUI/readme.txt"
@@ -28,6 +28,11 @@
 					"packager": "STMicroelectronics",
 					"name": "xpack-arm-none-eabi-gcc",
 					"version": "10.2.1-1.1"
+				}, 
+				{
+					"packager": "STMicroelectronics",
+					"name": "STM32Tools",
+					"version": "2.1.1"
 				}
 				
 			]
@@ -81,6 +86,41 @@
 					"archiveFileName": "xpack-arm-none-eabi-gcc-10.2.1-1.1-linux-ia32.tar.gz",
 					"checksum": "SHA-256:8adaca8af367a54d1acd2b274cfdc18384b87fbe0ba613322ea3ead20677a132",
 					"size": "192497639"
+				  }
+				]
+			}, 
+			{
+				"name": "STM32Tools",
+				"version": "2.1.1",
+				"systems":
+				[
+				  {
+					"host": "i686-mingw32",
+					"url": "https://github.com/stm32duino/Arduino_Tools/releases/download/2.1.1/STM32Tools-2.1.1-windows.tar.bz2",
+					"archiveFileName": "STM32Tools-2.1.1-windows.tar.bz2",
+					"checksum": "SHA-256:385f1495a70613ca6771c0f824e420f44e27b1433b0b449aaade1dde63b35e68",
+					"size": "2587832"
+				  },
+				  {
+					"host": "x86_64-apple-darwin",
+					"url": "https://github.com/stm32duino/Arduino_Tools/releases/download/2.1.1/STM32Tools-2.1.1-mac.tar.bz2",
+					"archiveFileName": "STM32Tools-2.1.1-mac.tar.bz2",
+					"checksum": "SHA-256:417bc75ebf19060083e29cf65f7a9f71a6903b7fd158c154057ed723c5e847a1",
+					"size": "486815"
+				  },
+				  {
+					"host": "x86_64-pc-linux-gnu",
+					"url": "https://github.com/stm32duino/Arduino_Tools/releases/download/2.1.1/STM32Tools-2.1.1-linux.tar.bz2",
+					"archiveFileName": "STM32Tools-2.1.1-linux.tar.bz2",
+					"checksum": "SHA-256:35ecc3914e8a0a45de229111cc45b8cb39a8e0a8c66313562fd51977a7ab3dee",
+					"size": "480360"
+				  },
+				  {
+					"host": "i686-pc-linux-gnu",
+					"url": "https://github.com/stm32duino/Arduino_Tools/releases/download/2.1.1/STM32Tools-2.1.1-linux.tar.bz2",
+					"archiveFileName": "STM32Tools-2.1.1-linux.tar.bz2",
+					"checksum": "SHA-256:35ecc3914e8a0a45de229111cc45b8cb39a8e0a8c66313562fd51977a7ab3dee",
+					"size": "480360"
 				  }
 				]
 			}

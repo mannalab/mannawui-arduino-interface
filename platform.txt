@@ -6,7 +6,7 @@ version=1.0.0
 
 #arm.none-eabi-gcc config
 #-----------------------------
-tools.arm_none_eabi_gcc.path         = C:\Users\bedre\AppData\Local\Arduino15\staging\packages\xpack-arm-none-eabi-gcc-10.2.1-1.1-win32-ia32\xpack-arm-none-eabi-gcc-10.2.1-1.1\bin\
+tools.arm_none_eabi_gcc.path         = {runtime.tools.xpack-arm-none-eabi-gcc-10.2.1-1.1.path}/bin/
 tools.arm_none_eabi_gcc.as           = arm-none-eabi-as
 tools.arm_none_eabi_gcc.gcc          = arm-none-eabi-gcc
 tools.arm_none_eabi_gcc.g++          = arm-none-eabi-g++
@@ -111,3 +111,13 @@ preproc.includes.flags               = -w -x c++ -M -MG -MP
 recipe.preproc.includes              = "{tools.arm_none_eabi_gcc.path}{tools.arm_none_eabi_gcc.g++}" {preproc.includes.flags} {tools.arm_none_eabi_gcc.cpp.cflags} {tools.arm_none_eabi_gcc.cpp.cppflags} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} {tools.arm_none_eabi_gcc.cpp.defines} {includes} {tools.arm_none_eabi_gcc.cpp.includes} "{source_file}"
 preproc.macros.flags                 = -w -x c++ -E -CC
 recipe.preproc.macros                = "{tools.arm_none_eabi_gcc.path}{tools.arm_none_eabi_gcc.g++}" {preproc.macros.flags} {tools.arm_none_eabi_gcc.cpp.cflags} {tools.arm_none_eabi_gcc.cpp.cppflags} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} {tools.arm_none_eabi_gcc.cpp.defines} {includes} {tools.arm_none_eabi_gcc.cpp.includes} "{source_file}" -o "{preprocessed_file_path}"
+
+
+# STM32CubeProgrammer upload
+tools.stm32CubeProg.path={runtime.tools.STM32Tools.path}
+tools.stm32CubeProg.busybox=
+tools.stm32CubeProg.busybox.windows={path}/win/busybox.exe
+tools.stm32CubeProg.cmd=stm32CubeProg.sh
+tools.stm32CubeProg.upload.params.verbose=
+tools.stm32CubeProg.upload.params.quiet=
+tools.stm32CubeProg.upload.pattern="{busybox}" sh "{path}/{cmd}" {upload.protocol} "{build.path}/{build.project_name}.bin" {upload.options}
