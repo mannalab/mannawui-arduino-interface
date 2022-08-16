@@ -1,0 +1,59 @@
+################################################################################
+# mannaWUI board
+
+mannaWUI.name=mannaWUI
+
+mannaWUI.build.core=arduino
+mannaWUI.build.board=mannaWUI
+mannaWUI.build.variant_h=variant_{build.board}.h
+mannaWUI.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial}
+
+mannaWUI.menu.pnum.mannaWUI_F407VG=STM32F407VGT
+mannaWUI.menu.pnum.mannaWUI_F407VG.node=mannaWUI_F407VG
+mannaWUI.menu.pnum.mannaWUI_F407VG.upload.maximum_size=1048576
+mannaWUI.menu.pnum.mannaWUI_F407VG.upload.maximum_data_size=131072
+mannaWUI.menu.pnum.mannaWUI_F407VG.build.board=mannaWUI_F407VG
+mannaWUI.menu.pnum.mannaWUI_F407VG.build.variant=STM32F4xx/F407V(E-G)T_F417V(E-G)T
+mannaWUI.menu.pnum.mannaWUI_F407VG.build.variant_h=variant_{build.board}.h
+
+#mannaWUI.menu.pnum.mannaWUI_F407VG=STM32F407VGT
+#mannaWUI.menu.pnum.mannaWUI_F407VG.node=mannaWUI_F407VG
+#mannaWUI.menu.pnum.mannaWUI_F407VG.upload.maximum_size=1048576
+#mannaWUI.menu.pnum.mannaWUI_F407VG.upload.maximum_data_size=131072
+#mannaWUI.menu.pnum.mannaWUI_F407VG.build.mcu=cortex-m4
+#mannaWUI.menu.pnum.mannaWUI_F407VG.build.flags.fp=-mfpu=fpv4-sp-d16 -mfloat-abi=hard
+#mannaWUI.menu.pnum.mannaWUI_F407VG.build.board=mannaWUI_F407VG
+#mannaWUI.menu.pnum.mannaWUI_F407VG.build.series=STM32F4xx
+#mannaWUI.menu.pnum.mannaWUI_F407VG.build.product_line=STM32F407xx
+#mannaWUI.menu.pnum.mannaWUI_F407VG.build.variant=STM32F4xx/F407V(E-G)T_F417V(E-G)T
+#mannaWUI.menu.pnum.mannaWUI_F407VG.build.variant_h=variant_{build.board}.h
+
+
+
+# Upload menu
+
+mannaWUI.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
+mannaWUI.menu.upload_method.swdMethod.upload.protocol=0
+mannaWUI.menu.upload_method.swdMethod.upload.options=-g
+mannaWUI.menu.upload_method.swdMethod.upload.tool=stm32CubeProg
+
+mannaWUI.menu.upload_method.serialMethod=STM32CubeProgrammer (Serial)
+mannaWUI.menu.upload_method.serialMethod.upload.protocol=1
+mannaWUI.menu.upload_method.serialMethod.upload.options={serial.port.file} -s
+mannaWUI.menu.upload_method.serialMethod.upload.tool=stm32CubeProg
+
+mannaWUI.menu.upload_method.dfuMethod=STM32CubeProgrammer (DFU)
+mannaWUI.menu.upload_method.dfuMethod.upload.protocol=2
+mannaWUI.menu.upload_method.dfuMethod.upload.options=-g
+mannaWUI.menu.upload_method.dfuMethod.upload.tool=stm32CubeProg
+
+
+#Block from https://github.com/stm32duino/Arduino_Core_STM32/blob/fa6e5cba3548e0fd2f254ff503e610a7a3118cfe/platform.txt
+# These can be overriden in boards.txt
+build.extra_flags=
+build.bootloader_flags=
+build.ldscript=ldscript.ld
+build.variant_h=variant_generic.h
+
+
+################################################################################
